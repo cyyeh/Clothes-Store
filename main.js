@@ -260,7 +260,13 @@ let initDetails = () => {
                             ${defaultColor === color ? "checked" : ""}
                             class=${ProductTypeButtonClassName}
                         />
-                        <label for="color-${color}">${capitalizeFirstLetter(color)}</label>
+                        <label
+                            for="color-${color}"
+                            class="product-type-button-label"
+                            style="color: black; background-color: ${color};"
+                        >
+                            ${capitalizeFirstLetter(color)}
+                        </label>
                     `
                 }
 
@@ -305,7 +311,12 @@ let initDetails = () => {
                                     class=${ProductTypeButtonClassName}
                                     checked
                                 />
-                                <label for="side-front">Front</label>
+                                <label
+                                    for="side-front"
+                                    class="product-type-button-label"
+                                >
+                                    Front
+                                </label>
                                 <input
                                     id="side-back"
                                     type="radio"
@@ -313,7 +324,12 @@ let initDetails = () => {
                                     value="back"
                                     class=${ProductTypeButtonClassName}
                                 />
-                                <label for="side-back">Back</label>
+                                <label
+                                    for="side-back"
+                                    class="product-type-button-label"
+                                >
+                                    Back
+                                </label>
                             </section>
                             ${
                                 detailState.color
