@@ -26,3 +26,25 @@ nav > a {
   color: darkred;
   text-decoration: none;
 }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+  height: 70px;
+}
+
+footer > a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+footer > p {
+  color: white;
+}
+
+footer > p > a {
+  color: white;
+  text-decoration: none;
+}
