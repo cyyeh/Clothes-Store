@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: solid 20px red;
+  border-top: solid 20px darkred;
 }
 
 header > h1 {
@@ -40,7 +40,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: red;
+  background-color: darkred;
   height: 70px;
 }
 
@@ -77,9 +77,61 @@ main#homepage > div {
 main#homepage > div > section {
   margin: 20px 20px 20px 20px;
   padding: 15px;
-  border: solid 3px red;
+  border: solid 3px darkred;
   border-radius: 5px;
   width: 400px;
+}
+
+/*
+  products page
+ */
+main#products {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 50px 50px 50px;
+}
+
+main#products > h2 {
+  font-size: 36px;
+}
+
+main#products > div {
+  display: flex;
+  flex-flow: wrap;
+}
+
+#products-container > article {
+  margin: 10px 10px 10px 10px;
+  border: solid 2px darkred;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.product-image-container > img {
+  width: 100%;
+}
+
+.product-info-container {
+  padding: 20px;
+}
+
+.product-info-container > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-info-container > div > button {
+  background-color: darkred;
+  border: solid 1px darkred;
+  border-radius: 5px;
+  padding: 10px 5px 10px 5px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.product-info-container > div > button:hover {
+  color: white;
 }
 
 /*
