@@ -134,6 +134,31 @@ main#products > div {
   color: white;
 }
 
+#quick-view-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 300px;
+  border: solid 2px darkred;
+  border-radius: 5px;
+  background: white;
+}
+
+#quick-view-window-close-btn {
+  float: right;
+  background: darkred;
+  color: white;
+  cursor: pointer;
+}
+
+.product-info-container > .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: red;
+}
+
 /*
   not implemented page
  */
