@@ -51,14 +51,15 @@ footer > p > a {
 
 main#not-implemented {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(site_images/scotty.png);
   height: 100vh;
-  background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: 35%;
   opacity: 0.4;
+}
+
+main#not-implemented > img {
+  width: 250px;
 }
 
 main#not-implemented > p {
