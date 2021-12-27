@@ -48,3 +48,19 @@ footer > p > a {
   color: white;
   text-decoration: none;
 }
+
+main#not-implemented {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(site_images/scotty.png);
+  height: 100vh;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 35%;
+  opacity: 0.4;
+}
+
+main#not-implemented > p {
+  font-size: 24px;
+}
