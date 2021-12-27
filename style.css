@@ -19,7 +19,7 @@ header > h1 {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-top: solid 2px gray;
   border-bottom: solid 2px gray;
 }
@@ -38,7 +38,7 @@ nav > a:hover {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: darkred;
   height: 70px;
@@ -89,7 +89,7 @@ main#products {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 50px 50px 50px 50px;
+  margin: 50px 15% 50px 15%;
 }
 
 main#products > h2 {
@@ -118,7 +118,7 @@ main#products > div {
 
 .product-info-container > div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .product-info-container > div > button {
@@ -165,6 +165,50 @@ main#products > div {
   font-size: 18px;
   font-weight: 600;
   color: red;
+}
+
+/*
+  details page
+ */
+main#details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 15% 50px 15%;
+}
+
+main#details > h2 {
+  font-size: 36px;
+}
+
+#details-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#details-container > section {
+  margin: 0px 20px 0px 20px;
+}
+
+#details-image {
+  width: 300px;
+}
+
+#details-container > .details-info-container > .price {
+  font-size: 30px;
+  color: darkred;
+}
+
+#details-container > .details-info-container > .description {
+  font-size: 18px;
+  color: darkred;
+  margin: 20px 0px 50px 0px;
+}
+
+.form-section {
+  margin: 20px 0px 20px 0px;
+  font-size: 18px;
 }
 
 /*
