@@ -10,17 +10,17 @@ let initProducts = () => {
     const DetailPageButtonsClassName = 'detail-page-btn'
 
     // Start of Used-More-Than-Once Helper Methods
-    function getProductCardImage(colorsImages, defaultImages) {
+    function getProductCardImage(colorsImages, defaultImages, direction='front') {
         console.assert(defaultImages, "There should be default images found!")
         console.assert(defaultImages.front, "There should be at least a default front image!")
 
         if (!colorsImages) {
-            return defaultImages.front
+            return defaultImages[direction]
         }
         if (!Object.keys(colorsImages).length) {
-            return defaultImages.front
+            return defaultImages[direction]
         } else {
-            return colorsImages[Object.keys(colorsImages)[0]].front
+            return colorsImages[Object.keys(colorsImages)[0]][direction]
         }
     }
 
@@ -131,6 +131,21 @@ let initProducts = () => {
 
     function clickProductQuickView(event) {
         function renderProductQuickView(product) {
+            function renderFrontBackImages(colorsImages, defaultImages, productName) {
+                return `
+                    <div>
+                        <img
+                            src=${getProductCardImage(colorsImages, defaultImages)}
+                            alt=${productName}
+                        />
+                        <img
+                            src=${getProductCardImage(colorsImages, defaultImages, direction='back')}
+                            alt=${productName}
+                        />
+                    </div>
+                `
+            }
+
             function getProductQuickViewHTML(product) {
                 return `
                     <article id="quick-view-window">
@@ -141,10 +156,7 @@ let initProducts = () => {
                             &times;
                         </button>
                         <section class="product-image-container">
-                            <img
-                                src=${getProductCardImage(product.colors, product.default)}
-                                alt=${product.name}
-                            />
+                            ${renderFrontBackImages(product.colors, product.default, product.name)}
                         </section>
                         <section class="product-info-container">
                             <h3>${product.name}</h3>
