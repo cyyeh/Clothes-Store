@@ -1,1 +1,28 @@
-/* Your Code Here */
+body {
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 20px red;
+}
+
+header > h1 {
+  margin: 50px;
+  font-size: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  border-top: solid 2px gray;
+  border-bottom: solid 2px gray;
+}
+
+nav > a {
+  margin: 20px 0px 20px 0px;
+  color: darkred;
+  text-decoration: none;
+}
